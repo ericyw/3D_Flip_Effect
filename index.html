@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>3D Flip Effect</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/reset_html.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+   
+        <script type="text/javascript" src="js/jquery-ui-1.7.1.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.7.2.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script>
+            $( function() {    
+                
+                $( "#flipPad a:not( .revert )" ).bind( "click", function() {    
+                
+                    var $this = $( this );
+                    
+                    $( "#flipbox" ).flip({
+                        
+                        direction: $this.attr( "rel" ),
+                        color: $this.attr( "rev" ),
+                        content: $this.attr( "title" ),
+                        onBefore: function() { $( "#flipbox" ).show(); }
+                    });
+                
+                    return false;
+                });
+                
+                $( ".revert" ).bind( "click", function() {
+                    
+                    $( "#flipbox" ).revertFlip();
+                    
+                    return false;
+                });
+                
+                var changeMailTo = function() {
+                    
+                    var mailArr = ["@", "smashup", "luca", "it"];
+                    $( "#email" ).attr( "href", "mailto:" + mailArr[2] + mailArr[0] + mailArr[1] + mailArr[3] );
+                }
+                
+                $( ".downloadBtn" ).click( function() {
+                    
+                    pageTracker._trackPageView( 'download_flip' );
+                });
+                
+                setTimeout( changeMailTo, 500 );
+            });
+        </script>
+    </head>
+    <body>
+        <section class="container">
+            <div class="clearfix">
+                <div style="visibility: visible; background-color: rgb( 57, 171, 62);" id="flipbox">Change content as you like!</div>
+                <div id="flipPad">
+                    <a href="#" class="left" rel="rl" rev="#39AB3E" title="Change content as &lt;em&gt;you&lt;/em&gt; like!">left</a>
+                    <a href="#" class="top" rel='bt' rev="#B0EB17" title="top">top</a>
+                    <a href="#" class="bottom" rel="tb" rev="#82BD2E" title="bottom">bottom</a>
+                    <a href="#" class="right" rel="lr" rev="#C8D97E" title="Waiting for CSS3">right</a>
+                    <a style="display: inline;" href="#" class="revert">revert!</a>
+                </div>
+            </div> 
+            
+        </section>
+    </body>
+</html>
