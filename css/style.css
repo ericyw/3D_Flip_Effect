@@ -2,7 +2,8 @@
 @font-face {
   font-family: 'ChunkFive Regular';
   src: url('fonts/Chunkfive.eot');
-  src: local('ChunkFive Regular'), local('ChunkFive'), url('fonts/Chunkfive.woff') format('woff'), url('fonts/Chunkfive.svg#ChunkFive') format('svg'), url('fonts/Chunkfive.otf') format('opentype');
+  src: local('ChunkFive Regular'), local('ChunkFive'), url('fonts/Chunkfive.woff') format('woff'), 
+      url('fonts/Chunkfive.svg#ChunkFive') format('svg'), url('fonts/Chunkfive.otf') format('opentype');
 }
 .clearfix:after {
   content: ".";
@@ -16,7 +17,12 @@ body {
   font-size: 67.5%;
   font-family: Helvetica, Tahoma, Verdana, sans-serif;
 }
-a { color: #1e90ff; }
+section.container {
+  margin-top: 60px !important;
+}
+a { 
+    color: #1e90ff; 
+}
 .container {
   width: 900px;
   margin: 0 auto;
@@ -85,7 +91,9 @@ a { color: #1e90ff; }
   color: #999999;
   line-height: 1.5em;
 }
-.container aside #thanksTo .others { color: #1e90ff; }
+.container aside #thanksTo .others { 
+  color: #1e90ff; 
+}
 .container aside #notes {
   color: #999999;
   font-size: 0.9em;
@@ -114,7 +122,9 @@ a { color: #1e90ff; }
   font-size: 1.2em;
   margin: 7px 0;
 }
-.container li strong { display: block; }
+.container li strong { 
+  display: block; 
+}
 #flipbox {
   width: 500px;
   height: 200px;
@@ -173,13 +183,17 @@ a { color: #1e90ff; }
   -webkit-box-shadow: 1px 1px 2px #999999;
   -webkit-transition-duration: 1s;
 }
-.downloadBtn:hover { background-color: #ff9000; }
+.downloadBtn:hover { 
+  background-color: #ff9000; 
+}
 .downloadGithub {
   display: block;
   text-align: right;
   margin: 3px 3px 25px 0;
 }
-.retweet { margin-top: 30px; }
+.retweet { 
+  margin-top: 30px; 
+}
 .tweetThis {
   position: fixed;
   bottom: 0;
@@ -199,4 +213,6 @@ a { color: #1e90ff; }
   border: 2px solid #ff9000;
   white-space: no-wrap;
 }
-.tweetThis:hover span { display: block; }
+.tweetThis:hover span { 
+  display: block; 
+}
